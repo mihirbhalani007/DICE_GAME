@@ -11,8 +11,7 @@ const result = document.getElementById("result");
 
 function rollDice() {
   const roll = Math.floor(Math.random() * 6) + 1;
-  dice.textContent = roll;
-  dice.classList.add("shake");
+  dice.classList.add("shake"); // add animation
   dice.classList.add("spin");
   dice.src = `assets/${roll}.svg`;
 
@@ -42,9 +41,6 @@ function determineWinner() {
   } else {
     result.textContent = "It's a Tie!";
   }
-
-  // Reset scores after determining the winner
-  setTimeout(resetGame, 3000);
 }
 
 function resetGame() {
